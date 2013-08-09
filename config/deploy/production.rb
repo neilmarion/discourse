@@ -34,8 +34,8 @@ namespace :deploy do
 
   task :setup_config, roles: :app do
     run "mkdir -p #{shared_path}/config"
-    put File.read("config/database.example.yml"), "#{shared_path}/config/database.yml"
-    put File.read("config/facebook.example.yml"), "#{shared_path}/config/facebook.yml"
+    put File.read("config/database.yml.production-sample"), "#{shared_path}/config/database.yml"
+    put File.read("config/redis.yml.sample"), "#{shared_path}/config/redis.yml"
     puts "Now edit the config files in #{shared_path}."
   end 
   after "deploy:setup", "deploy:setup_config"
