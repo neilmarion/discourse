@@ -132,7 +132,7 @@ class SiteSetting < ActiveRecord::Base
   setting(:best_of_percent_filter, 20)
 
   # we need to think of a way to force users to enter certain settings, this is a minimal config thing
-  setting(:notification_email, 'info@discourse.org')
+  setting(:notification_email, 'info@kadiwa.forums.neilmarion.com')
   setting(:email_custom_headers, 'Auto-Submitted: auto-generated')
 
   setting(:allow_index_in_robots_txt, true)
